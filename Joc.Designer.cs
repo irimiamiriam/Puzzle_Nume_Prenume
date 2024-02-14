@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.button4 = new System.Windows.Forms.RadioButton();
             this.button9 = new System.Windows.Forms.RadioButton();
             this.button2 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelT = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -101,6 +104,20 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // labelT
+            // 
+            this.labelT.AutoSize = true;
+            this.labelT.Location = new System.Drawing.Point(666, 39);
+            this.labelT.Name = "labelT";
+            this.labelT.Size = new System.Drawing.Size(37, 16);
+            this.labelT.TabIndex = 6;
+            this.labelT.Text = "          ";
+            // 
             // Joc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -108,6 +125,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(738, 490);
+            this.Controls.Add(this.labelT);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button4);
@@ -131,5 +149,7 @@
         private System.Windows.Forms.RadioButton button4;
         private System.Windows.Forms.RadioButton button9;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelT;
     }
 }
